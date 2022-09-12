@@ -1,23 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { contrastColor } from 'contrast-color';
+import randomColor from 'randomcolor';
+import { useState } from 'react';
 
 function App() {
+  //can put randomColor() in useState to start with a random color
+  const [color, setColor] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Random Color Generator</h1>
+      <div
+      className="box"
+        style={{
+          width: 600,
+          height: 400,
+          margin: '0 auto',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: 45,
+          border: "2px solid black",
+          borderRadius: 150,
+          backgroundColor: color,
+          color: contrastColor({ bgColor: color }),
+        }}
+      >
+        Generated Color: <br/> {color}
+      </div>
+      <br />
+      <br />
+      <button
+        onClick={() => {
+          setColor(randomColor);
+        }}
+      >
+        Generate
+      </button>
+
     </div>
   );
 }
