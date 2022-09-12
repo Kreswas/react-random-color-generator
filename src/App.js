@@ -4,7 +4,7 @@ import randomColor from 'randomcolor';
 import { useState } from 'react';
 
 function App() {
-  //can put randomColor() in useState to start with a random color
+  // can put randomColor() in useState to start with a random color
   const [color, setColor] = useState("");
 
   return (
