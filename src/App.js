@@ -26,7 +26,7 @@ function App() {
           color: contrastColor({ bgColor: color }),
         }}
       >
-        Generated Color: <br /> {color}
+        <p>Generated Color:</p> {color}
       </div>
       <br />
       <br />
