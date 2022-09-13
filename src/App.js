@@ -13,7 +13,7 @@ function App() {
       <div
         className="box"
         style={{
-          width: 600,
+          width: 400,
           height: 400,
           margin: '0 auto',
           display: 'flex',
@@ -26,7 +26,7 @@ function App() {
           color: contrastColor({ bgColor: color }),
         }}
       >
-        <p>Generated Color:</p> {color}
+        Generated Color: {color}
       </div>
       <br />
       <br />
