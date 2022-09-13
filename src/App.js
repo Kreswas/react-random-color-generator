@@ -5,13 +5,13 @@ import { useState } from 'react';
 
 function App() {
   // can put randomColor() in useState to start with a random color
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState('');
 
   return (
     <div>
       <h1>Random Color Generator</h1>
       <div
-      className="box"
+        className="box"
         style={{
           width: 600,
           height: 400,
@@ -20,13 +20,13 @@ function App() {
           justifyContent: 'center',
           alignItems: 'center',
           fontSize: 45,
-          border: "2px solid black",
+          border: '2px solid black',
           borderRadius: 150,
           backgroundColor: color,
           color: contrastColor({ bgColor: color }),
         }}
       >
-        Generated Color: <br/> {color}
+        Generated Color: <br /> {color}
       </div>
       <br />
       <br />
@@ -37,7 +37,6 @@ function App() {
       >
         Generate
       </button>
-
     </div>
   );
 }
